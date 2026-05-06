@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Atlas OS · Documentation</title>
+<meta name="description" content="Atlas OS documentation. The operating system for the brokerage desk. Sovereign by composition. From Swarm and Bee LLC.">
+<link rel="canonical" href="https://docs.swarmandbee.ai/">
+<link rel="stylesheet" href="_shared.css">
+</head>
+<body>
+
+<nav class="top">
+  <div class="shell row">
+    <a class="brand" href="./"><span class="accent">Atlas</span> OS Docs</a>
+    <ul>
+      <li><a class="link active" href="./">Overview</a></li>
+      <li><a class="link" href="./getting-started.html">Getting started</a></li>
+      <li><a class="link" href="./aiov.html">AIOV</a></li>
+      <li><a class="link" href="./personas.html">Personas</a></li>
+      <li><a class="link" href="https://github.com/SudoSuOps/atlasOS">GitHub</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main>
+
+<span class="eyebrow">Documentation</span>
+<h1>Atlas OS</h1>
+<p class="lead">The operating system for the brokerage desk. Thirty years of doctrine, codified. Every output Defendable. Verified · Vetted · Virtu.</p>
+
+<div class="callout">
+  <strong>What you're reading</strong>
+  <p>This is the canonical documentation for Atlas OS — the OS that runs on every HACKER box and the network protocol that ties them together. The repository at <a href="https://github.com/SudoSuOps/atlasOS">github.com/SudoSuOps/atlasOS</a> is the source of truth; this site is the human-facing rendering.</p>
+</div>
+
+<h2>Where to start</h2>
+
+<div class="steps">
+  <div class="step">
+    <h3>I just bought a HACKER. What now?</h3>
+    <p>Read <a href="./getting-started.html">Getting started</a>. Power on, register your subdomain, fund your wallet, place your first AIOV.</p>
+  </div>
+  <div class="step">
+    <h3>I'm thinking about ordering one.</h3>
+    <p>See the product pages — <a href="https://hackerpro.eth.link">hackerpro.eth</a> for the $599 family-office box, or <a href="https://aiov.swarmandbee.ai">aiov.swarmandbee.ai</a> for the killer pre-broker valuation product that runs on it.</p>
+  </div>
+  <div class="step">
+    <h3>I'm a developer integrating with the network.</h3>
+    <p>Read <a href="./personas.html">Personas</a> for ENS subdomain provisioning, then the schemas for LOI · NDA · OM · AIOV. The agent-to-agent x402 integration spec is in the repo at <code>AGENT-ECONOMY.md</code>.</p>
+  </div>
+  <div class="step">
+    <h3>I'm counsel verifying a deal.</h3>
+    <p>Hand me the <code>defendable.eth</code> URL. I'll show you how to walk the chain in 30 seconds without ever seeing the deal data.</p>
+  </div>
+</div>
+
+<hr class="rule">
+
+<h2>The thesis · in two paragraphs</h2>
+
+<p>Every other commercial real estate platform sells you a search index. You log into Crexi, CoStar, LoopNet, Reonomy, Placer — you pay $500 to $2,000 per seat per month — your team types your listings into their database — they rent the data back to you and your competitors. The model is extraction. The customer subsidizes the platform's data business.</p>
+
+<p>Atlas OS sells labor. Two AI roles per desk, priced like the humans they replace: <strong>Hack-Deed-Maker $60K/yr</strong> (the analytical hire) and <strong>Bookmaker / Gigi $60K/yr</strong> (the creative hire). Both run on a $250 silver box that sits on your desk, with the data layer baked into the role at no separate fee. The senior broker stays on the dial floor. The box stays at the desk. Three to four times the volume per Hack, same total cost-to-staff.</p>
+
+<hr class="rule">
+
+<h2>The composition</h2>
+
+<p>Three open protocols compose into the first labor product on the AI agent economy:</p>
+
+<table>
+  <thead><tr><th>Layer</th><th>Protocol</th><th>What it provides</th></tr></thead>
+  <tbody>
+    <tr><td>Identity</td><td><strong>ENS</strong></td><td>Sovereign WHO. <code>&lt;persona&gt;.atlasos.eth</code> resolves to a wallet the customer controls. Seed phrase never on our servers.</td></tr>
+    <tr><td>Payment</td><td><strong>x402</strong></td><td>Sovereign HOW. Coinbase + Cloudflare's HTTP 402 standard. Agent pays USDC autonomously. Sub-5-second settlement. No API keys, no MSAs, no invoicing.</td></tr>
+    <tr><td>Receipts</td><td><strong>Hedera</strong></td><td>Sovereign WHAT. Every transaction emits a receipt at <code>&lt;type&gt;.defendable.eth/&lt;id&gt;</code>. Counsel-verifiable in 30 seconds.</td></tr>
+  </tbody>
+</table>
+
+<p>None of the three is platform-controlled. Atlas OS is the first product layered on top of all three for commercial real estate. <strong>The composition is the moat — not the brain, not the corpus, not the GPUs.</strong></p>
+
+<hr class="rule">
+
+<h2>The product line</h2>
+
+<table>
+  <thead><tr><th>Product</th><th>Hardware</th><th>Brain</th><th>Customer</th></tr></thead>
+  <tbody>
+    <tr><td><strong>HACKER</strong> · $250</td><td>Jetson Orin Nano 8GB</td><td>Granite-4.1-3B (Hack-Deed-Maker)</td><td>Brokerage desk</td></tr>
+    <tr><td><strong>HACKER-PRO</strong> · $599</td><td>Jetson Orin NX 16GB</td><td>Granite-4.1-8B (Bookmaker)</td><td>Family office · senior desk</td></tr>
+    <tr><td><strong>HACKER-AGX</strong> · $2,000</td><td>AGX Orin 64GB</td><td>Granite-4.1-30B (branch)</td><td>Brokerage HQ · sponsor</td></tr>
+  </tbody>
+</table>
+
+<p>Same operating system. Same network protocol. Same Defendable receipt chain. The bigger the role, the bigger the brain.</p>
+
+<h3>Services that run on the network</h3>
+
+<table>
+  <thead><tr><th>Service</th><th>ENS surface</th><th>Pricing</th></tr></thead>
+  <tbody>
+    <tr><td><strong>AIOV</strong> · AI Opinion of Value</td><td><a href="https://aiov.swarmandbee.ai">aiov.eth</a></td><td>$499 / call · $4,999 / yr</td></tr>
+    <tr><td><strong>Rainmaker</strong> · Inventory matching</td><td>rainmaker.atlasos.eth</td><td>0.25–0.50% per closed match</td></tr>
+    <tr><td><strong>Atlas-70B</strong> · Doctrine model · ephemeral</td><td>atlas70b.atlasos.eth</td><td>per-call (varies)</td></tr>
+  </tbody>
+</table>
+
+<hr class="rule">
+
+<h2>What's documented here · what's in the repo</h2>
+
+<p><strong>Here on docs.swarmandbee.ai:</strong></p>
+<ul class="discipline">
+  <li><a href="./getting-started.html"><strong>Getting started</strong></a> · Power-on through first AIOV. The customer onboarding flow.</li>
+  <li><a href="./aiov.html"><strong>AIOV in depth</strong></a> · The full technical user guide for the AI Opinion of Value product.</li>
+  <li><a href="./personas.html"><strong>Personas &amp; ENS</strong></a> · How subdomains, wallets, and confidentiality compose.</li>
+</ul>
+
+<p><strong>In the GitHub repo</strong> (<a href="https://github.com/SudoSuOps/atlasOS">SudoSuOps/atlasOS</a>):</p>
+<ul class="discipline">
+  <li><code>README.md</code> · the story · 30 years · $8B · sat in the pit</li>
+  <li><code>ARCHITECTURE.md</code> · the four-layer technical map (identity · compute · work · receipts)</li>
+  <li><code>PRODUCTS.md</code> · SKU bundles · pricing</li>
+  <li><code>PERSONAS.md</code> · ENS subdomain registry mechanics</li>
+  <li><code>DEFENDABLE.md</code> · receipt subdomain tree · 30-second audit walkthrough</li>
+  <li><code>DISCORD.md</code> · the Defendable Discord community surface</li>
+  <li><code>INFRA.md</code> · sovereign GPU fleet · "we are not a cloud provider"</li>
+  <li><code>MODELS.md</code> · full model stack (Atlas-70B, Bookmaker-8B, Hack-Deed-Maker-3B, Docling, Whisper, Piper)</li>
+  <li><code>CORPUS.md</code> · Royal Jelly CRE corpus · RJP-1 grading · cook auditor protocol</li>
+  <li><code>AGENT-ECONOMY.md</code> · ENS + x402 thesis · the load-bearing positioning</li>
+  <li><code>recipes/</code> · declarative cook specs (YAML) per model</li>
+  <li><code>services/aiov/landing/</code> · the AIOV landing page (deployed to aiov.swarmandbee.ai)</li>
+  <li><code>docs/site/</code> · these documentation pages</li>
+</ul>
+
+<hr class="rule">
+
+<h2>The trust standard</h2>
+
+<p><strong>Verified.</strong> Every fact in every output traces to a source. sha256 + Hedera anchor.</p>
+<p><strong>Vetted.</strong> Every fact passes the seven-dimension drill before it ships. Tenant story · building specs · market summary · lease terms · financials · comps · story hooks.</p>
+<p><strong>Virtu.</strong> Italian for craftsmanship as a virtue. The standard isn't <em>good enough to ship</em>. The standard is <em>something the founder would put his own name on.</em></p>
+
+<p style="margin-top:24px;color:var(--ink);">We don't ship slop.</p>
+
+<div class="pager">
+  <a class="next" href="./getting-started.html">
+    <small>Next →</small>
+    <strong>Getting started</strong>
+  </a>
+</div>
+
+<footer>
+  <div class="grid">
+    <div>
+      <h4>Network</h4>
+      <ul>
+        <li><a href="https://atlasos.eth.link">atlasos.eth</a></li>
+        <li><a href="https://defendable.eth.link">defendable.eth</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Products</h4>
+      <ul>
+        <li><a href="https://hackerpro.eth.link">hackerpro.eth</a></li>
+        <li><a href="https://aiov.swarmandbee.ai">aiov.swarmandbee.ai</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Provenance</h4>
+      <ul>
+        <li>Swarm and Bee LLC</li>
+        <li>Florida · D-U-N-S 138652395</li>
+        <li><a href="https://github.com/SudoSuOps/atlasOS">github.com/SudoSuOps/atlasOS</a></li>
+      </ul>
+    </div>
+  </div>
+  <p class="closing">Stop renting a search engine. Hire the work. Plug in the box.</p>
+</footer>
+
+</main>
+</body>
+</html>

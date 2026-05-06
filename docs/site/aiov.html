@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AIOV in depth · Atlas OS docs</title>
+<meta name="description" content="The full technical user guide for AIOV — AI Opinion of Value. The killer pre-broker valuation product. Sovereign by architecture.">
+<link rel="canonical" href="https://docs.swarmandbee.ai/aiov.html">
+<link rel="stylesheet" href="_shared.css">
+</head>
+<body>
+
+<nav class="top">
+  <div class="shell row">
+    <a class="brand" href="./"><span class="accent">Atlas</span> OS Docs</a>
+    <ul>
+      <li><a class="link" href="./">Overview</a></li>
+      <li><a class="link" href="./getting-started.html">Getting started</a></li>
+      <li><a class="link active" href="./aiov.html">AIOV</a></li>
+      <li><a class="link" href="./personas.html">Personas</a></li>
+      <li><a class="link" href="https://github.com/SudoSuOps/atlasOS">GitHub</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main>
+
+<span class="eyebrow">AIOV · in depth</span>
+<h1>The AI Opinion of Value</h1>
+<p class="lead">A defensible commercial real estate value opinion in 30 to 60 minutes. Zero market exposure. Sovereign by architecture, not by promise. The killer pre-broker product for family offices and institutional sellers.</p>
+
+<div class="callout">
+  <strong>Customer-facing landing</strong>
+  <p>The marketing version of this page is at <a href="https://aiov.swarmandbee.ai">aiov.swarmandbee.ai</a>. This page is the technical user guide — for HACKER-PRO owners, integration developers, and counsel verifying receipts.</p>
+</div>
+
+<h2>What AIOV is for</h2>
+
+<p>You own a property. You might sell. You want a real number first.</p>
+
+<p>The traditional paths cost you exposure:</p>
+
+<ul class="discipline">
+  <li><strong>Call a broker.</strong> They run a Broker Opinion of Value (BOV) in 1–2 weeks. It's "free" because the broker now thinks they have your listing. The market starts to know.</li>
+  <li><strong>Order an appraisal.</strong> $5,000 to $15,000. 2 to 4 weeks. May leak comps and intent through the appraiser's pipeline.</li>
+  <li><strong>Hire a consultant.</strong> Slow, expensive, and still a third party that knows.</li>
+</ul>
+
+<p>AIOV gives you a value opinion without anyone in the market knowing you asked. <strong>$499. 30 to 60 minutes. Sovereign by architecture.</strong></p>
+
+<h2>What you get back</h2>
+
+<p>An AIOV report renders on your HACKER-PRO and contains:</p>
+
+<ul class="discipline">
+  <li><strong>Subject Property summary.</strong> Locked from the input documents — every fact has a source citation.</li>
+  <li><strong>Current value opinion.</strong> Cap-rate range, price-per-SF range, defended with comps.</li>
+  <li><strong>Stabilized value opinion.</strong> Where applicable (value-add deals).</li>
+  <li><strong>Cap rate justification.</strong> Each comp Hedera-anchored.</li>
+  <li><strong>Tenant credit assessment.</strong> S&amp;P / Moody's pulled at session time, anchored to the report.</li>
+  <li><strong>Lease structure analysis.</strong> NN / NNN / Ground Lease distinctions, LL responsibilities, option ladders, escalations.</li>
+  <li><strong>Financing scenario.</strong> Assumed LTV, DSCR sensitivity at current rates.</li>
+  <li><strong>Risk register.</strong> Renewal risk, environmental, market trajectory.</li>
+  <li><strong>Marketability assessment.</strong> Likely buyer pool, time-to-close estimate.</li>
+  <li><strong>Suggested ask, suggested floor, go-to-market timeline.</strong></li>
+  <li><strong>AIOV receipt URL.</strong> Counsel-verifiable proof of work without revealing what was analyzed.</li>
+</ul>
+
+<p>The report renders as a multi-page PDF on your HACKER-PRO. The PDF stays on your disk. We never get a copy.</p>
+
+<h2>How it actually works · the privacy architecture</h2>
+
+<p>The "we can't see your deal even if we wanted to" claim is structural, not promised. Here's the flow:</p>
+
+<div class="steps">
+  <div class="step">
+    <h3>Documents go to your HACKER-PRO</h3>
+    <p>Drop them through the inbox URL or USB-C. They never touch a cloud. Granite Docling parses every page locally on your hardware.</p>
+  </div>
+  <div class="step">
+    <h3>Local 8B underwriter pre-computes</h3>
+    <p>The Bookmaker-class brain on your HACKER-PRO computes preliminary cap, DSCR, IRR, and structures the deal_highlights JSON. Locked numbers, no raw PDFs in the JSON.</p>
+  </div>
+  <div class="step">
+    <h3>Encrypted brief travels to Atlas-70B</h3>
+    <p>A small JSON brief encrypted with a one-time session key. Travels over HTTPS to <code>atlas70b.atlasos.eth</code>. Container is TPM-attested at boot. No persistent volumes mounted. The container literally cannot retain data.</p>
+  </div>
+  <div class="step">
+    <h3>Atlas-70B runs the deep analysis</h3>
+    <p>The doctrine model — 70B parameters of CRE-trained reasoning — produces the value opinion. Encrypts the response with the same session key. Container self-destructs.</p>
+  </div>
+  <div class="step">
+    <h3>Encrypted return, on-box render</h3>
+    <p>Your HACKER-PRO decrypts with your wallet. Only your wallet has the session key. Renders the report locally as a PDF. Stores it on your disk.</p>
+  </div>
+  <div class="step">
+    <h3>Hedera anchors metadata only</h3>
+    <p>Session ID, timestamps, request size, container TPM measurement. <strong>Never</strong> deal data, address, tenant, or financials. The receipt at <code>aiov.defendable.eth/&lt;id&gt;</code> proves the work was done.</p>
+  </div>
+</div>
+
+<div class="callout note">
+  <strong>What this means in audit</strong>
+  <p>If a regulator, counsel, or your own CTO asks "did this AIOV happen, and can you prove it?" — yes, in 30 seconds, with a public Hedera URL. If they ask "what did the AIOV say?" — only you can show them. The receipt is open. The content is sovereign.</p>
+</div>
+
+<h2>Pricing</h2>
+
+<table>
+  <thead><tr><th>Plan</th><th>Cost</th><th>Best for</th></tr></thead>
+  <tbody>
+    <tr><td>Per-deal</td><td>$499 / AIOV (USDC)</td><td>Occasional sellers · 1–3 deals/yr</td></tr>
+    <tr><td>Subscription</td><td>$4,999 / yr (12 AIOVs · effective $416/each)</td><td>Active family offices · 10+ properties under management</td></tr>
+    <tr><td>Enterprise</td><td>Custom</td><td>Multi-billion family office · full portfolio coverage · dedicated session capacity</td></tr>
+  </tbody>
+</table>
+
+<p>Settlement is in USDC via x402 from your HACKER-PRO's funded wallet. No invoicing. No accounts receivable. You see the line item in your wallet ledger.</p>
+
+<h2>Calling AIOV from another agent (developer integration)</h2>
+
+<p>AIOV is callable from any agent on any platform. The protocol is HTTP + x402. No SDK to install. No API key.</p>
+
+<pre><code># Pseudocode · agent-side
+1. Resolve aiov.eth via ENS → service wallet address + endpoint
+2. POST encrypted_brief to endpoint
+3. Receive: 402 Payment Required · USDC · $499 · pay to &lt;wallet&gt;
+4. Wallet pays $499 USDC autonomously (Base or Optimism)
+5. Retry POST with X-Payment header (the settlement receipt)
+6. Receive: 200 OK · encrypted AIOV report
+7. Decrypt with caller's wallet (you signed the encrypted brief, you can decrypt the response)
+8. Receipt at aiov.defendable.eth/&lt;session_id&gt; · public · no content</code></pre>
+
+<p>For full agent-economy integration spec, see <a href="https://github.com/SudoSuOps/atlasOS/blob/main/AGENT-ECONOMY.md"><code>AGENT-ECONOMY.md</code></a> in the repo.</p>
+
+<h2>What AIOV is not</h2>
+
+<div class="callout warn">
+  <strong>Not a state-licensed appraisal</strong>
+  <p>AIOV is not an appraisal and is not provided by a state-licensed appraiser. AIOV reports are intended as an internal analytical tool for property owners, family offices, and institutional investors. <strong>Reports must not be used as the basis for federally regulated transactions where a state-licensed appraisal is required (FIRREA · federally related transactions over $400,000).</strong></p>
+  <p>Use AIOV when you want a sober, defensible internal value opinion. Use a state-licensed appraiser when the transaction structure requires one.</p>
+</div>
+
+<p>AIOV is also not a substitute for the broker conversation when you're ready to list. It's the analysis you do <em>before</em> you decide to list — so when you do engage a broker, you're negotiating from a position of knowing what you have.</p>
+
+<hr class="rule">
+
+<h2>Frequently asked</h2>
+
+<h3>Can I run AIOV on a HACKER (not HACKER-PRO)?</h3>
+<p>Technically yes — the AIOV service itself is callable from any wallet. But the HACKER ($250) only hosts the 3B underwriter, which means the local pre-computation step is less robust. We recommend HACKER-PRO ($599) for AIOV-heavy workflows. The 8B Bookmaker-class brain on the HACKER-PRO produces better deal_highlights JSON for Atlas-70B to crack.</p>
+
+<h3>How do I top up my wallet?</h3>
+<p>Send USDC on Base or Optimism to the wallet address shown in your HACKER's UI. Or use the built-in ACH-to-USDC bridge (KYC required first time, ~1–3 days for first deposit, instant after).</p>
+
+<h3>Can I share an AIOV report with a buyer?</h3>
+<p>Yes. The report is yours. You can hand it to a buyer's counsel along with the <code>aiov.defendable.eth/&lt;id&gt;</code> URL. Counsel verifies the receipt is real (we anchored it), reads the report (you provided it), and the chain is auditable end to end.</p>
+
+<h3>What if the AIOV is wrong?</h3>
+<p>AIOV is a defensible value opinion based on the documents you provided plus public data and CRE doctrine. It is not a guaranteed price prediction. If you disagree with the conclusion, the receipt structure makes it easy to drill into <em>why</em> AIOV reached the conclusion (which comps it leaned on, what cap-rate range it used, what risk factors it weighted). Adjust your inputs or your interpretation; the AIOV process is transparent.</p>
+
+<h3>Can two AIOVs on the same property differ?</h3>
+<p>Slightly, yes. Different document inputs (e.g., a more recent T-12 vs an older one), different timing (cap rate environment shifts week to week), and different prompt nuances can shift the output. Both AIOVs anchor independently. Both are receipts. Use them as longitudinal data points.</p>
+
+<h3>Is AIOV used to train your models?</h3>
+<p>No. AIOV requests are processed in ephemeral containers with no persistent storage. The encrypted brief is decrypted in memory only, processed, encrypted-on-response, and the container destroys itself. There is no training pipeline that ingests customer AIOV requests. The Royal Jelly CRE corpus that trains our brains is curated separately from external sources and never touches customer content.</p>
+
+<div class="pager">
+  <a class="prev" href="./getting-started.html">
+    <small>← Previous</small>
+    <strong>Getting started</strong>
+  </a>
+  <a class="next" href="./personas.html">
+    <small>Next →</small>
+    <strong>Personas &amp; ENS</strong>
+  </a>
+</div>
+
+<footer>
+  <div class="grid">
+    <div>
+      <h4>Network</h4>
+      <ul>
+        <li><a href="https://atlasos.eth.link">atlasos.eth</a></li>
+        <li><a href="https://defendable.eth.link">defendable.eth</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Products</h4>
+      <ul>
+        <li><a href="https://hackerpro.eth.link">hackerpro.eth</a></li>
+        <li><a href="https://aiov.swarmandbee.ai">aiov.swarmandbee.ai</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Provenance</h4>
+      <ul>
+        <li>Swarm and Bee LLC</li>
+        <li>Florida · D-U-N-S 138652395</li>
+        <li><a href="https://github.com/SudoSuOps/atlasOS">github.com/SudoSuOps/atlasOS</a></li>
+      </ul>
+    </div>
+  </div>
+  <p class="closing">Stop renting a search engine. Hire the work. Plug in the box.</p>
+</footer>
+
+</main>
+</body>
+</html>

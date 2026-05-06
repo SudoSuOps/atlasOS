@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Personas &amp; ENS · Atlas OS docs</title>
+<meta name="description" content="How AtlasOS subdomains, wallets, and confidentiality compose. ENS as the sovereignty primitive.">
+<link rel="canonical" href="https://docs.swarmandbee.ai/personas.html">
+<link rel="stylesheet" href="_shared.css">
+</head>
+<body>
+
+<nav class="top">
+  <div class="shell row">
+    <a class="brand" href="./"><span class="accent">Atlas</span> OS Docs</a>
+    <ul>
+      <li><a class="link" href="./">Overview</a></li>
+      <li><a class="link" href="./getting-started.html">Getting started</a></li>
+      <li><a class="link" href="./aiov.html">AIOV</a></li>
+      <li><a class="link active" href="./personas.html">Personas</a></li>
+      <li><a class="link" href="https://github.com/SudoSuOps/atlasOS">GitHub</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main>
+
+<span class="eyebrow">Personas &amp; ENS</span>
+<h1>The subdomain comes with the box.</h1>
+<p class="lead">When you buy a HACKER, you don't just get hardware. You get a seat on the network. Your subdomain at <code>&lt;your-name&gt;.atlasos.eth</code> is the identity, the endpoint, and the confidentiality boundary all at once.</p>
+
+<h2>The four functions of your subdomain</h2>
+
+<table>
+  <thead><tr><th>Function</th><th>What it does</th></tr></thead>
+  <tbody>
+    <tr>
+      <td><strong>Identity</strong></td>
+      <td>Other HACKERs resolve <code>&lt;your-name&gt;.atlasos.eth</code> to your wallet. When you ship an LOI, the network verifies the signature against this. No impersonation possible.</td>
+    </tr>
+    <tr>
+      <td><strong>Endpoint discovery</strong></td>
+      <td>Your subdomain also resolves to your live HACKER endpoint (or the gateway proxying it). When Rainmaker matches inventory to your timeline, it routes to <em>your</em> box, not a cloud mailbox.</td>
+    </tr>
+    <tr>
+      <td><strong>Confidentiality boundary</strong></td>
+      <td>Every NDA, OM, AIOV, and LOI is encrypted to your wallet's public key. Your subdomain unlocks them. Without your wallet, no one — including us — can decrypt.</td>
+    </tr>
+    <tr>
+      <td><strong>Cross-firm portability</strong></td>
+      <td>A receipt at <code>om.defendable.eth/&lt;hash&gt;</code> carries your subdomain in its parent_anchors. Counsel at any firm verifies the chain in 30 seconds. No platform onboarding.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Why ENS is the sovereignty primitive</h2>
+
+<p>Every other identity model is platform-locked.</p>
+
+<ul class="discipline">
+  <li>A Crexi user ID belongs to Crexi. They can revoke it, sell it, log it.</li>
+  <li>A CoStar login belongs to CoStar.</li>
+  <li>An OAuth token belongs to whoever issued it.</li>
+  <li>An API key belongs to the provider.</li>
+</ul>
+
+<p><strong>If your identity lives on someone else's database, every transaction routes through that someone.</strong> They see the deal. They keep a copy. They charge rent. They become the marketplace.</p>
+
+<p>ENS flips it. <code>&lt;your-name&gt;.atlasos.eth</code> resolves to a wallet your HACKER controls via a seed phrase you hold. The seed phrase is not on Swarm and Bee LLC servers — <em>cannot</em> be on our servers. The identity is yours by ECDSA mathematics, not by terms of service.</p>
+
+<div class="callout">
+  <strong>This is what makes the privacy claim survive an audit</strong>
+  <p>When we say "we can't see your deal even if we wanted to," it's true because the encrypted return travels to <em>your subdomain's wallet</em> · we never hold the decryption key · we cannot be subpoenaed for what we don't have.</p>
+</div>
+
+<h2>Naming patterns</h2>
+
+<table>
+  <thead><tr><th>Customer type</th><th>Subdomain pattern</th><th>Example</th></tr></thead>
+  <tbody>
+    <tr><td>Brokerage Hack desk</td><td>first name</td><td>harvey.atlasos.eth</td></tr>
+    <tr><td>Brokerage firm (HQ)</td><td>firm name</td><td>ackermangroup.atlasos.eth</td></tr>
+    <tr><td>Family office</td><td>firm name</td><td>acmecapital.atlasos.eth</td></tr>
+    <tr><td>Sponsor / seller</td><td>sponsor name</td><td>kerco.atlasos.eth</td></tr>
+    <tr><td>Service persona</td><td>service name</td><td>rainmaker.atlasos.eth</td></tr>
+    <tr><td>Vertical Rainmaker</td><td>vertical-specific</td><td>rainmaker.stnl.atlasos.eth</td></tr>
+  </tbody>
+</table>
+
+<h2>Subdomain tiers and pricing</h2>
+
+<table>
+  <thead><tr><th>Tier</th><th>Cost</th></tr></thead>
+  <tbody>
+    <tr><td>Standard subdomain (any first name · firm name · service name)</td><td>$0 · bundled with box</td></tr>
+    <tr><td>Two-word subdomain (e.g., midtown-cre.atlasos.eth)</td><td>$0 · bundled with box</td></tr>
+    <tr><td>Premium one-word (e.g., harvey · alec · aj)</td><td>$0 · first-come basis</td></tr>
+    <tr><td>Reserved one-word (specific names: jpmorgan, blackstone, etc)</td><td>priced per request</td></tr>
+    <tr><td>Multi-tenant office (5+ subdomains for one firm)</td><td>bulk discount available</td></tr>
+  </tbody>
+</table>
+
+<h2>Wallet pairing</h2>
+
+<p>Every subdomain resolves to a wallet generated at provisioning. The HACKER's secure element holds the private key; the public key is the ENS resolver target.</p>
+
+<div class="steps">
+  <div class="step">
+    <h3>Order a HACKER</h3>
+    <p>Pick a subdomain at checkout (subject to availability).</p>
+  </div>
+  <div class="step">
+    <h3>Box ships pre-flashed with AtlasOS</h3>
+    <p>Provisioning is local-first.</p>
+  </div>
+  <div class="step">
+    <h3>Power on, choose to generate or import wallet</h3>
+    <p>Generation happens on-box · seed phrase shown once · written to recovery card.</p>
+  </div>
+  <div class="step">
+    <h3>ENS subdomain registered to your wallet</h3>
+    <p>Your HACKER signs the registration transaction · subdomain now lives at <code>&lt;your-name&gt;.atlasos.eth</code>.</p>
+  </div>
+  <div class="step">
+    <h3>Network identity active</h3>
+    <p>You can now ship and verify receipts · receive encrypted documents · pay x402 services · be discovered by other HACKERs and Rainmakers.</p>
+  </div>
+</div>
+
+<h2>What happens if you sell your box</h2>
+
+<p>The subdomain stays with the box (or transfers to the new owner's wallet at their choice). HACKER provisioning records are anchored at <code>provisioning.atlasos.eth</code>, so chain of custody is auditable.</p>
+
+<p>If the box is lost or destroyed, the subdomain can be re-bound to a new wallet only if you have retained the seed phrase. <strong>This is your responsibility — sovereign data also means sovereign key management.</strong> We can't reset what we don't hold.</p>
+
+<h2>What happens if you stop being a customer</h2>
+
+<p>Nothing. Your box keeps working. Your subdomain stays bound. Past receipts at <code>&lt;type&gt;.defendable.eth/&lt;hash&gt;</code> remain verifiable forever — they're on Hedera.</p>
+
+<p>Subscription products (AIOV subscription, Rainmaker matching) lapse on non-renewal, but the box itself is yours, the OS is yours, and the cooked weights you have are yours. We don't brick boxes.</p>
+
+<p>The customer relationship is term-bounded; your property rights aren't. That's the non-extractive part of the model.</p>
+
+<hr class="rule">
+
+<h2>Service personas (the network-resident ones)</h2>
+
+<p>In addition to customer subdomains, the AtlasOS network runs service personas that anyone can call:</p>
+
+<table>
+  <thead><tr><th>Persona</th><th>Role</th><th>Pricing</th></tr></thead>
+  <tbody>
+    <tr><td><code>aiov.atlasos.eth</code></td><td>AI Opinion of Value</td><td>$499 / call · $4,999 / yr subscription</td></tr>
+    <tr><td><code>rainmaker.atlasos.eth</code></td><td>Inventory matching</td><td>0.25–0.50% per closed match</td></tr>
+    <tr><td><code>atlas70b.atlasos.eth</code></td><td>Doctrine model · ephemeral inference</td><td>per-call (varies by complexity)</td></tr>
+    <tr><td><code>gigi.atlasos.eth</code></td><td>Bookmaker · OM rendering</td><td>$1,500 / OM (planned)</td></tr>
+    <tr><td><code>provision.atlasos.eth</code></td><td>HACKER provisioning service</td><td>bundled with hardware</td></tr>
+  </tbody>
+</table>
+
+<p>These personas are operated by Swarm and Bee LLC. The customer subdomains (yours, your peers') are operated by their respective wallet holders.</p>
+
+<hr class="rule">
+
+<h2>The two-tree ENS architecture</h2>
+
+<p>AtlasOS uses ENS in two complementary trees:</p>
+
+<table>
+  <thead><tr><th>Tree</th><th>Role</th><th>Resolves to</th></tr></thead>
+  <tbody>
+    <tr><td><strong>atlasos.eth</strong></td><td>WHO · identity · persona · agent · live HACKER endpoint</td><td>wallet address + endpoint URL</td></tr>
+    <tr><td><strong>defendable.eth</strong></td><td>WHAT · certified document · receipt · audit chain</td><td>hash + parent chain on Hedera</td></tr>
+  </tbody>
+</table>
+
+<p>They compose. <code>harvey.atlasos.eth</code> ships an underwrite, the receipt lands at <code>deed.defendable.eth/&lt;hash&gt;</code> with parent_anchors pointing back to harvey's wallet. The actor and the artifact are both addressable, both verifiable, both portable across firms.</p>
+
+<div class="pager">
+  <a class="prev" href="./aiov.html">
+    <small>← Previous</small>
+    <strong>AIOV in depth</strong>
+  </a>
+  <a class="next" href="./">
+    <small>Back to →</small>
+    <strong>Overview</strong>
+  </a>
+</div>
+
+<footer>
+  <div class="grid">
+    <div>
+      <h4>Network</h4>
+      <ul>
+        <li><a href="https://atlasos.eth.link">atlasos.eth</a></li>
+        <li><a href="https://defendable.eth.link">defendable.eth</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Products</h4>
+      <ul>
+        <li><a href="https://hackerpro.eth.link">hackerpro.eth</a></li>
+        <li><a href="https://aiov.swarmandbee.ai">aiov.swarmandbee.ai</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Provenance</h4>
+      <ul>
+        <li>Swarm and Bee LLC</li>
+        <li>Florida · D-U-N-S 138652395</li>
+        <li><a href="https://github.com/SudoSuOps/atlasOS">github.com/SudoSuOps/atlasOS</a></li>
+      </ul>
+    </div>
+  </div>
+  <p class="closing">Stop renting a search engine. Hire the work. Plug in the box.</p>
+</footer>
+
+</main>
+</body>
+</html>

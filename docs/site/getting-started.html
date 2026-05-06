@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Getting started · Atlas OS docs</title>
+<meta name="description" content="Power on your HACKER. Register your subdomain. Fund your wallet. Place your first AIOV.">
+<link rel="canonical" href="https://docs.swarmandbee.ai/getting-started.html">
+<link rel="stylesheet" href="_shared.css">
+</head>
+<body>
+
+<nav class="top">
+  <div class="shell row">
+    <a class="brand" href="./"><span class="accent">Atlas</span> OS Docs</a>
+    <ul>
+      <li><a class="link" href="./">Overview</a></li>
+      <li><a class="link active" href="./getting-started.html">Getting started</a></li>
+      <li><a class="link" href="./aiov.html">AIOV</a></li>
+      <li><a class="link" href="./personas.html">Personas</a></li>
+      <li><a class="link" href="https://github.com/SudoSuOps/atlasOS">GitHub</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main>
+
+<span class="eyebrow">Getting started</span>
+<h1>Power on. Register. Fund. Order.</h1>
+<p class="lead">From cardboard box to your first AIOV in about fifteen minutes. Same flow whether you bought a HACKER ($250), HACKER-PRO ($599), or HACKER-AGX ($2,000).</p>
+
+<div class="callout">
+  <strong>Before you begin</strong>
+  <p>You'll need: your HACKER, an ethernet cable (preferred · WiFi works as fallback), an HDMI display for first boot, a USB keyboard, and a way to fund a wallet (USDC on Base or Optimism). If you don't have USDC yet, see step 3 — your HACKER ships with a $50 starter balance for the first AIOV on us.</p>
+</div>
+
+<h2>Step 1 · Power on</h2>
+
+<p>Plug your HACKER into ethernet, HDMI, USB keyboard, and the included USB-C power supply. The box boots in about 12 seconds and lands on the AtlasOS first-run screen.</p>
+
+<p>The first-run screen shows three things:</p>
+
+<ul class="discipline">
+  <li><strong>Box serial.</strong> Memorize it or photograph it · this is the device-level identity bound to your subdomain.</li>
+  <li><strong>Network status.</strong> Ethernet primary · WiFi fallback · Hedera mirror node connection · ENS resolver connection.</li>
+  <li><strong>Provisioning code.</strong> A 6-word phrase you'll enter on a separate device to complete subdomain registration.</li>
+</ul>
+
+<h2>Step 2 · Register your subdomain</h2>
+
+<p>From your laptop or phone (any device with a browser), navigate to:</p>
+
+<pre><code>https://provision.atlasos.eth/&lt;your-provisioning-code&gt;</code></pre>
+
+<p>You'll be asked for:</p>
+
+<ul class="discipline">
+  <li><strong>Subdomain choice.</strong> What you want to be called on the network. <code>harvey.atlasos.eth</code> for a brokerage Hack named Harvey · <code>familyofficexyz.atlasos.eth</code> for a family office · <code>kerco.atlasos.eth</code> for a sponsor named Kerco. Subject to availability.</li>
+  <li><strong>Wallet generation OR import.</strong> The HACKER can generate a fresh wallet for you (recommended for new users · we never see the seed phrase) or import an existing wallet via seed phrase.</li>
+  <li><strong>Backup confirmation.</strong> If you generated a fresh wallet, write down the 12-word seed phrase on the included recovery card. <strong>This is the only copy. We can't restore it.</strong> Store the card in your safe, your safe deposit box, or your password manager — your call. Sovereign data also means sovereign key management.</li>
+</ul>
+
+<div class="callout warn">
+  <strong>Don't lose the seed phrase</strong>
+  <p>The seed phrase is the only key to your wallet, your subdomain, and every Defendable receipt anchored under your name. If you lose it, you lose access to past work. The architecture is built so that nobody — not us, not Hedera, not ENS — can restore it for you. The cost of sovereignty is responsible key management.</p>
+</div>
+
+<p>Once registered, your HACKER is now a node on the AtlasOS network at <code>&lt;your-name&gt;.atlasos.eth</code>. Other HACKERs can resolve you. You can resolve them. You can sign documents and ship deeds.</p>
+
+<h2>Step 3 · Fund your wallet</h2>
+
+<p>Most AtlasOS services run on x402 micropayments — your wallet pays per call autonomously. To use AIOV, Rainmaker, or any third-party agent service, your wallet needs USDC.</p>
+
+<p>Three paths:</p>
+
+<table>
+  <thead><tr><th>If you have</th><th>Path</th><th>Time</th></tr></thead>
+  <tbody>
+    <tr><td>USDC on Base or Optimism</td><td>Send to your wallet address (shown in the HACKER UI)</td><td>~30 sec</td></tr>
+    <tr><td>USD in a Coinbase / Kraken / Binance account</td><td>Buy USDC, withdraw to your wallet</td><td>~5 min</td></tr>
+    <tr><td>USD in a US bank only</td><td>Use the HACKER's onboarding flow → ACH bridge to USDC (KYC required)</td><td>1–3 days first time</td></tr>
+  </tbody>
+</table>
+
+<p>Your HACKER ships with a <strong>$50 USDC starter credit</strong> for your first AIOV on us. That's enough to test the flow end to end before you commit to topping up.</p>
+
+<h2>Step 4 · Place your first AIOV</h2>
+
+<p>Drop a property document (rent roll, T-12, lease, OM — any one of these is enough to start) onto the HACKER's inbox surface. From your provisioning device:</p>
+
+<pre><code>https://&lt;your-name&gt;.atlasos.eth/inbox</code></pre>
+
+<p>Or speak to your HACKER directly:</p>
+
+<pre><code>"Hacker, AIOV my property at 1805 Justin Road, Flower Mound, TX."</code></pre>
+
+<p>Your HACKER:</p>
+
+<div class="steps">
+  <div class="step">
+    <h3>Parses your documents on-box</h3>
+    <p>Granite Docling reads every page locally. Files never leave your hardware.</p>
+  </div>
+  <div class="step">
+    <h3>Encrypts the brief</h3>
+    <p>Your HACKER generates a one-time session key, encrypts a small JSON brief (locked numbers · no raw PDFs).</p>
+  </div>
+  <div class="step">
+    <h3>Calls aiov.eth via x402</h3>
+    <p>Atlas-70B in an ephemeral container responds with 402 Payment Required → your wallet pays $499 USDC autonomously → encrypted report returns.</p>
+  </div>
+  <div class="step">
+    <h3>Renders on-box</h3>
+    <p>Your HACKER decrypts with your wallet, renders the AIOV report locally, drops it in your inbox.</p>
+  </div>
+  <div class="step">
+    <h3>Anchors the receipt</h3>
+    <p>Hedera anchors the session metadata at <code>aiov.defendable.eth/&lt;id&gt;</code>. Counsel can verify the work happened — without seeing what was analyzed.</p>
+  </div>
+</div>
+
+<p>Total wall-clock time: 30 to 60 minutes. Total work for you: drop the docs, read the report.</p>
+
+<h2>Step 5 · Read the receipt</h2>
+
+<p>Every AIOV ships with a receipt URL in the report footer. It looks like:</p>
+
+<pre><code>aiov.defendable.eth/&lt;your-deal-short-id&gt;</code></pre>
+
+<p>Hand this URL to your CFO, your CTO, your counsel, your QI. They paste it in any browser. They see:</p>
+
+<ul class="discipline">
+  <li>The session ID (random uuid)</li>
+  <li>Who requested it (your subdomain)</li>
+  <li>What service produced it (<code>atlas70b.atlasos.eth</code>)</li>
+  <li>When the work happened (start + end timestamps)</li>
+  <li>The TPM attestation of the ephemeral container</li>
+  <li>The Hedera transaction proving the anchor</li>
+</ul>
+
+<p>What they <strong>can never see</strong>:</p>
+
+<ul class="discipline">
+  <li>The deal data</li>
+  <li>The property address</li>
+  <li>The tenant name</li>
+  <li>The financials</li>
+  <li>The valuation conclusion</li>
+</ul>
+
+<p>That's by design. The chain proves the work was done. The content stays sovereign.</p>
+
+<hr class="rule">
+
+<h2>What's next</h2>
+
+<ul class="discipline">
+  <li>Read <a href="./aiov.html"><strong>AIOV in depth</strong></a> for the technical user guide on the AI Opinion of Value.</li>
+  <li>Read <a href="./personas.html"><strong>Personas &amp; ENS</strong></a> for how subdomains, wallets, and the confidentiality model compose.</li>
+  <li>Join the Defendable Discord (your HACKER is pre-configured to join — just acknowledge the wallet auth challenge on first connection).</li>
+  <li>Order a second HACKER if you have a second desk. Same procedure end to end.</li>
+</ul>
+
+<div class="pager">
+  <a class="prev" href="./">
+    <small>← Previous</small>
+    <strong>Overview</strong>
+  </a>
+  <a class="next" href="./aiov.html">
+    <small>Next →</small>
+    <strong>AIOV in depth</strong>
+  </a>
+</div>
+
+<footer>
+  <div class="grid">
+    <div>
+      <h4>Network</h4>
+      <ul>
+        <li><a href="https://atlasos.eth.link">atlasos.eth</a></li>
+        <li><a href="https://defendable.eth.link">defendable.eth</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Products</h4>
+      <ul>
+        <li><a href="https://hackerpro.eth.link">hackerpro.eth</a></li>
+        <li><a href="https://aiov.swarmandbee.ai">aiov.swarmandbee.ai</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Provenance</h4>
+      <ul>
+        <li>Swarm and Bee LLC</li>
+        <li>Florida · D-U-N-S 138652395</li>
+        <li><a href="https://github.com/SudoSuOps/atlasOS">github.com/SudoSuOps/atlasOS</a></li>
+      </ul>
+    </div>
+  </div>
+  <p class="closing">Stop renting a search engine. Hire the work. Plug in the box.</p>
+</footer>
+
+</main>
+</body>
+</html>
