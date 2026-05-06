@@ -1,0 +1,81 @@
+# Atlas OS · gitignore
+
+# Environment / secrets
+.env
+.env.*
+*.key
+*.pem
+*.p12
+*.pfx
+.aws/
+.gcp/
+secrets/
+credentials/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+
+# Node
+node_modules/
+*.log
+npm-debug.log*
+
+# Build artifacts
+dist/
+build/
+*.tsbuildinfo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Model weights (proprietary · never commit)
+*.gguf
+*.safetensors
+*.bin
+*.pth
+*.ckpt
+weights/
+models/
+adapters/
+
+# Cooked artifacts
+lora-adapter/
+merged/
+checkpoints/
+
+# Local data (sovereign · stays on customer hardware)
+data/
+*.jsonl
+honey-ledger/
+*.sqlite
+*.db
+
+# Hedera receipts (anchored upstream · don't commit local logs)
+anchors/
+receipts/
+hedera-logs/
+
+# Sensitive customer artifacts
+om-pdfs/
+loi-drafts/
+nda-signed/
+aiov-reports/
+
+# Generated docs / temp
+tmp/
+temp/
+.cache/
