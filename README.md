@@ -271,10 +271,16 @@ atlasOS/
 
 ## Reach
 
-- Network: `atlasos.eth`
-- Box page: `hackerpro.eth`
-- Receipts: `defendable.eth`
-- Founder: build@swarmandbee.ai
+```
+Network namespace        atlasos.eth        identity · personas · live HACKER endpoints
+Receipt namespace        defendable.eth     certified documents · audit chains · Hedera anchors
+HACKER-PRO landing       hackerpro.eth      product page · pricing · order
+Firm presence            swarmandbee.ai     parent firm · build@swarmandbee.ai
+```
+
+ENS expiry tracking is part of the operational discipline — see `docs/` for the
+domain renewal calendar. Nothing on the public AtlasOS surface fails because a
+domain lapsed.
 
 ---
 
