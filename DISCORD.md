@@ -7,7 +7,7 @@ happens. Where Tito Tuesday lives. Where alpha lands.
 
 ## What it is
 
-A Discord server hosted by Caballerz Network LLC, gated to verified AtlasOS personas.
+A Discord server hosted by Swarm and Bee LLC, gated to verified AtlasOS personas.
 
 ```
 Server name        Defendable
@@ -112,7 +112,7 @@ verified HACKERs running real boxes on real desks.
 - **Box-bound presence.** Each subdomain can connect from one HACKER at a time.
   Cloned VMs trying to fake presence get flagged immediately by signature mismatch.
 - **No data exfiltration.** Channel messages are not scraped, sold, or used for
-  training. Period. Caballerz Network LLC commits to this in the terms.
+  training. Period. Swarm and Bee LLC commits to this in the terms.
 - **No web scraping bots.** Discord's standard anti-scrape applies, plus our own
   rate limits + signature requirements.
 - **Founder presence.** Donovan and the operating team are in the server. Not as

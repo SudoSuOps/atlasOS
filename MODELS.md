@@ -2,7 +2,7 @@
 
 The full model stack. Every brain that runs on every node.
 
-Documentation only. Cooked weights are proprietary to Caballerz Network LLC and ship
+Documentation only. Cooked weights are proprietary to Swarm and Bee LLC and ship
 inside customer-held HACKER hardware. Base models cited here are publicly available
 under their respective licenses.
 
@@ -179,8 +179,8 @@ Granite-Docling-258M          Apache 2.0 (IBM)
 Whisper                       MIT (OpenAI)
 Piper TTS                     MIT (rhasspy)
 
-Cooked LoRA adapters          PROPRIETARY — Caballerz Network LLC
-Royal Jelly CRE corpus        PROPRIETARY — Caballerz Network LLC (see CORPUS.md)
+Cooked LoRA adapters          PROPRIETARY — Swarm and Bee LLC
+Royal Jelly CRE corpus        PROPRIETARY — Swarm and Bee LLC (see CORPUS.md)
 Atlas OS infrastructure       Apache 2.0 (this repository)
 ```
 

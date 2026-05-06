@@ -98,7 +98,7 @@ pricing         $499 / AIOV  ·  $4,999 / yr (12 AIOVs)
 the box         Connection to HACKER-PRO + ENS sovereignty
 order           Two paths: existing HACKER-PRO owner, or new
 founder block   30 years · $8B · "I sat in the pit"
-footer          V/V/V trust standard · Caballerz Network LLC · DUNS · GitHub
+footer          V/V/V trust standard · Swarm and Bee LLC · DUNS · GitHub
 ```
 
 ---

@@ -215,7 +215,7 @@ We don't ship slop.
 
 ## Provenance
 
-**Caballerz Network LLC** · DBA **Swarm & Bee** · Florida LLC.
+**Swarm and Bee LLC** · Florida.
 Dun & Bradstreet **D-U-N-S 138652395**.
 
 Founder background: thirty years in commercial real estate on a national platform.
@@ -233,7 +233,7 @@ Same standard. The receipts make it portable.
 Apache 2.0 for the OS components and schemas in this repository.
 
 The cooked model weights — Atlas-70B, Bookmaker-8B, Hack-Deed-Maker-3B — are proprietary
-to Caballerz Network LLC. Available to customers who hold a HACKER box on the network.
+to Swarm and Bee LLC. Available to customers who hold a HACKER box on the network.
 
 ---
 
@@ -280,7 +280,7 @@ Firm presence            swarmandbee.ai     parent firm · build@swarmandbee.ai
 ```
 
 The .eth surfaces are the sovereign identity layer. ENS subdomains and primary names
-are owned by Caballerz Network LLC's wallets, the customer's wallets, or the service
+are owned by Swarm and Bee LLC's wallets, the customer's wallets, or the service
 personas — never by a platform that could revoke them. See `AGENT-ECONOMY.md` for how
 ENS pairs with x402 (HTTP 402 Payment Required) to make these services callable
 agent-to-agent without sales calls, contracts, or API key dances.

@@ -31,7 +31,7 @@ wallet. There's no impersonating you on this network.
 
 **3 · Confidentiality boundary.** Every NDA, OM, AIOV, and LOI is encrypted to your
 wallet. Your subdomain is the public key that unlocks them. Without your wallet, no one
-else — not even Atlas-70B, not even Caballerz Network LLC — can decrypt your deals.
+else — not even Atlas-70B, not even Swarm and Bee LLC — can decrypt your deals.
 
 **4 · Cross-firm portability.** A receipt at `om.defendable.eth/<hash>` carries the
 issuer subdomain in its parent_anchors. Counsel at any firm, in any state, in any
@@ -124,7 +124,7 @@ true at the architecture level:
 ```
 
 The subdomain is the front of this whole structure. **Without your subdomain's wallet,
-no piece of Caballerz Network LLC infrastructure can read your deal.**
+no piece of Swarm and Bee LLC infrastructure can read your deal.**
 
 That's the confidentiality model. It's structural, not contractual.
 

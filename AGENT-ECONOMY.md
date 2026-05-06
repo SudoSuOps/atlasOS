@@ -31,7 +31,7 @@ familyofficexyz.atlasos.eth
 <seed phrase the customer holds>
 ```
 
-The seed phrase is not on Caballerz Network LLC servers. *Cannot* be on our servers.
+The seed phrase is not on Swarm and Bee LLC servers. *Cannot* be on our servers.
 The identity is the customer's by mathematics — by ECDSA over secp256k1 — not by
 terms of service.
 
@@ -107,7 +107,7 @@ all the way down.**
 
 ### 4 · No business development required for new customers
 A 23-year-old AI engineer at a sovereign wealth fund builds an internal valuation
-agent. They don't know who Caballerz Network LLC is. They don't have a contract.
+agent. They don't know who Swarm and Bee LLC is. They don't have a contract.
 They don't have a sales rep.
 
 Their agent resolves `aiov.eth`, pays from a treasury wallet, gets the report.
@@ -203,7 +203,7 @@ HACKER-PRO debits autonomously per call. Top-up is a one-click flow at
 There is no other commercial real estate product callable via ENS + x402 today.
 There may be eventually, but Atlas OS gets there first because:
 
-- Caballerz Network LLC owns the compute (no cloud margin to recover)
+- Swarm and Bee LLC owns the compute (no cloud margin to recover)
 - We sell labor not seats (so per-call pricing maps to product economics)
 - We ship the box that already has the wallet (no integration work for customers)
 - We're broker-native (the customer-facing language hides all the plumbing)

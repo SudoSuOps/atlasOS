@@ -3,7 +3,7 @@
 > *Not a cloud provider. Not a data harvester. We own the compute.*
 
 This is the infra-side of the labor business thesis. The boxes ship to customer
-desks; the back-end inference runs on hardware Caballerz Network LLC owns and operates.
+desks; the back-end inference runs on hardware Swarm and Bee LLC owns and operates.
 There is no AWS line item. There is no Azure line item. There is no GCP line item.
 There is no "data partner" agreement that gives a third party access to your deals.
 
@@ -34,7 +34,7 @@ Edge reference unit                      signal-edge-01 · Jetson Orin Nano 8GB
                                           (the canonical HACKER deployment target)
 ```
 
-These are owned, racked, and operated by Caballerz Network LLC. Not leased capacity.
+These are owned, racked, and operated by Swarm and Bee LLC. Not leased capacity.
 Not committed cloud spend. Not "AI cloud" credits.
 
 ---
@@ -155,7 +155,7 @@ A real estate brokerage doctrine company that owns its compute, sells its labor 
 roles (not seats), anchors its work in cryptographic receipts, and stays out of every
 data-extraction model the rest of the industry runs on.
 
-Caballerz Network LLC · DBA Swarm & Bee · Florida LLC · D-U-N-S 138652395.
+Swarm and Bee LLC · Florida LLC · D-U-N-S 138652395.
 
 The compute is the office. The boxes are the desks. The receipts are the work.
 The customer pays for the work.
@@ -174,7 +174,7 @@ Three ways:
    `aiov.defendable.eth/<session_id>`. The metadata is public. The container TPM
    measurement is public. The deal content is not — and never will be — anchored.
 
-3. **Audit the LLC.** Caballerz Network LLC is a Florida-registered legal entity with
+3. **Audit the LLC.** Swarm and Bee LLC is a Florida-registered legal entity with
    a public D-U-N-S number. State-licensed brokers operate the firm's brokerage
    activities. Real address, real entity, real liability. Not an offshore wrapper.
 

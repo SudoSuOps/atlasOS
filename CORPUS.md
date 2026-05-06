@@ -4,7 +4,7 @@ The proprietary CRE training corpus. Curated under the Royal Jelly Protocol. Pow
 every Atlas brain — Atlas-70B, Bookmaker-8B, Hack-Deed-Maker-3B — and every future
 vertical Hack.
 
-**Documentation only.** Corpus content is proprietary to Caballerz Network LLC and
+**Documentation only.** Corpus content is proprietary to Swarm and Bee LLC and
 never committed to this repository. Hashes and structure are anchored on Hedera for
 verification.
 
@@ -215,7 +215,7 @@ The corpus compounds. The brains compound with it.
 
 ## License
 
-The Royal Jelly CRE Corpus is **proprietary** to Caballerz Network LLC (DBA Swarm & Bee).
+The Royal Jelly CRE Corpus is **proprietary** to Swarm and Bee LLC.
 
 **Not licensed for redistribution.** Available indirectly through cooked Atlas brains
 that ship inside customer-held HACKER hardware. Customers don't license the corpus —
