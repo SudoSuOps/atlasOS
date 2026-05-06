@@ -246,7 +246,10 @@ atlasOS/
 ├── PRODUCTS.md            HACKER · HACKER-PRO · HACKER-AGX · AIOV · Rainmaker
 ├── PERSONAS.md            atlasos.eth subdomain registry · how identities work
 ├── DEFENDABLE.md          the receipt layer · subdomain tree · audit walkthroughs
+├── MODELS.md              full model stack — Atlas-70B · Bookmaker-8B · Hack-Deed-Maker-3B · Docling
+├── CORPUS.md              Royal Jelly CRE corpus — provenance · RJP grading · cook auditor
 ├── ROADMAP.md             what's running · what's next · cooks calendar
+├── recipes/               cook recipes (declarative · per-model spec) — atlas-70b · bookmaker-8b · hack-deed-maker-3b
 ├── schema/                JSON schemas for every Defendable document
 │   ├── loi.schema.json
 │   ├── nda.schema.json

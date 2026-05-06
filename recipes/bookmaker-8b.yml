@@ -1,0 +1,84 @@
+# Bookmaker-8B · cook recipe
+# OS-tier reasoner · runs on HACKER-PRO + datacenter batch · Bookmaker (Gigi) class
+#
+# Documentation only · canonical script lives in the cook rig.
+
+name: bookmaker-8b
+description: bf16 LoRA fine-tune of IBM Granite-4.1-8B on Royal Jelly CRE Block-0
+status: cooking (2026-05-06)
+
+base:
+  repo: ibm-granite/granite-4.1-8b
+  license: Apache 2.0
+  arch: dense decoder · 40 layers · 4096 hidden · GQA 32:8 · SwiGLU · tied embeddings · 128K ctx · BF16
+  vocab: 100352
+
+method:
+  type: bf16 LoRA · single-GPU · NO FSDP · NO QLoRA
+  why: Granite-8B BF16 ~16 GB on 32GB 5090 · LoRA opt + grads ~1.5 GB · acts ~3-5 GB · comfortable
+
+lora:
+  r: 64
+  alpha: 32
+  dropout: 0.0
+  bias: none
+  target_modules: [q_proj, k_proj, v_proj, o_proj, gate_proj, up_proj, down_proj]
+  notes: Granite has tie_word_embeddings=True · avoid target=all to prevent embed/lm_head conflicts
+
+training:
+  learning_rate: 1.0e-5
+  lr_scheduler: cosine
+  warmup_ratio: 0.05
+  weight_decay: 0.01
+  per_device_batch_size: 1
+  gradient_accumulation_steps: 32
+  effective_batch_size: 32
+  max_seq_len: 4096              # 5090 has headroom · captures p99 of corpus
+  max_steps: 1177                # apples-to-apples vs Atlas-70B
+  eval_steps: 200
+  save_steps: 200
+  save_total_limit: 7
+  early_stopping_patience: 5
+  early_stopping_threshold: 0.001
+  optim: adamw_torch
+  seed: 42
+
+hardware:
+  rig: smash
+  gpus: 1× RTX 5090 32GB
+  precision: bf16
+  cook_time_hours: ~9-10
+
+data:
+  corpus: Royal Jelly CRE Block-0 (same as atlas-70b · apples-to-apples)
+  train_records: 125651
+  eval_records: 996
+
+defendable:
+  issuer: swarmandbee.eth
+  category: bookmaker.defendable.eth
+  anchor_topic: "0.0.10291838"
+  compares_to: atlas.defendable.eth
+
+eval_actuals:
+  step_200: { eval_loss: 0.9421, token_acc: 0.7765 }
+  step_400: { eval_loss: 0.5615, token_acc: 0.8579 }
+  step_600: pending
+  step_800: pending
+  step_1000: pending
+  step_1177: pending
+  notes: at step 400, eval_loss already in striking range of Atlas-70B at step 1010
+         · projecting eval_loss ~0.40-0.45 final · 1/9 the params · the IQ-vs-cost
+         frontier is forming up
+
+deployment:
+  hacker_pro:
+    quantization: Q4_K_M
+    on_disk: ~4 GB
+    runtime: ollama (Granite 4 chat template native)
+    persona: <office-name>.atlasos.eth
+  datacenter_batch:
+    quantization: bf16
+    on_disk: ~16 GB
+    runtime: vLLM
+    use: OM rendering · Bookmaker batch jobs · per-deal SKU fulfillment

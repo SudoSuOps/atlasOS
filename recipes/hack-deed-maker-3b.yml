@@ -1,0 +1,77 @@
+# Hack-Deed-Maker-3B · cook recipe
+# Desk-edge underwriter · runs on HACKER ($250 box) · the daily driver
+#
+# Documentation only · canonical script lives in the cook rig.
+
+name: hack-deed-maker-3b
+description: bf16 LoRA fine-tune of IBM Granite-4.1-3B on Royal Jelly CRE Block-0
+status: cooking (2026-05-06)
+
+base:
+  repo: ibm-granite/granite-4.1-3b
+  license: Apache 2.0
+  arch: dense decoder · 40 layers · 2560 hidden · GQA 40:8 · SwiGLU · tied embeddings · 128K ctx · BF16
+  vocab: 100352
+
+method:
+  type: bf16 LoRA · single-GPU
+  why: 3B BF16 ~6 GB · trivial fit on 32 GB 5090 · ~2× faster step time than 8B
+
+lora:
+  r: 64
+  alpha: 32
+  dropout: 0.0
+  bias: none
+  target_modules: [q_proj, k_proj, v_proj, o_proj, gate_proj, up_proj, down_proj]
+
+training:
+  learning_rate: 1.0e-5
+  lr_scheduler: cosine
+  warmup_ratio: 0.05
+  weight_decay: 0.01
+  per_device_batch_size: 1
+  gradient_accumulation_steps: 32
+  effective_batch_size: 32
+  max_seq_len: 4096
+  max_steps: 1177                # apples-to-apples
+  eval_steps: 200
+  save_steps: 200
+  save_total_limit: 7
+  early_stopping_patience: 5
+  optim: adamw_torch
+  seed: 42
+
+hardware:
+  rig: 192.168.0.99 (5090 dev rig)
+  gpus: 1× RTX 5090 32GB
+  precision: bf16
+  cook_time_hours: ~5-6
+
+data:
+  corpus: Royal Jelly CRE Block-0 (same as atlas-70b and bookmaker-8b)
+  train_records: 125651
+  eval_records: 996
+
+defendable:
+  issuer: swarmandbee.eth
+  category: hack-deed-maker.defendable.eth
+  anchor_topic: "0.0.10291838"
+
+eval_actuals:
+  step_200: { eval_loss: 1.102, token_acc: 0.7517 }
+  notes: tracks within 3pts token accuracy of Bookmaker-8B at same step ·
+         the IQ gap between $250 HACKER and $599 HACKER-PRO is real but small
+         · likely invisible to broker users for daily underwriting tasks
+
+deployment:
+  hacker_box:
+    hardware: NVIDIA Jetson Orin Nano 8GB Super (~$250)
+    quantization: Q4_K_M
+    on_disk: ~2.1 GB
+    runtime: ollama on JetPack 6.x
+    sustained_throughput: 13.5 tok/s
+    ttft: ~500 ms (after model loaded)
+    cold_load: ~5 sec
+    coexists_with: granite-docling-258M (eyes) + whisper-base (ears) + piper-tts (mouth)
+    total_memory_envelope: ~4.5 GB · 1.9 GB headroom
+    persona: <broker-firstname>.atlasos.eth

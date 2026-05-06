@@ -1,0 +1,89 @@
+# Atlas-70B · cook recipe
+# The doctrine model · runs in datacenter · powers AIOV
+#
+# Documentation only · paths and tokens redacted ·
+# canonical script lives in the cook rig under /data2/atlas-70b/scripts/
+
+name: atlas-70b
+description: bf16 LoRA fine-tune of Llama-3.3-70B-Instruct on Royal Jelly CRE Block-0
+status: cooking (2026-05-06)
+
+base:
+  repo: meta-llama/Llama-3.3-70B-Instruct
+  license: Meta Llama 3.3 Community License
+  arch: dense decoder · 80 layers · 8192 hidden · GQA 64:8 · SwiGLU · 128K ctx · BF16
+  vocab: 128256
+
+method:
+  type: bf16 LoRA + FSDP-QLoRA (Meta cookbook recipe)
+  quantization_base: nf4 4-bit (storage = bfloat16 for FSDP)
+  compute_dtype: bf16
+  why: 70B + bf16 LoRA needs ~140 GB across 2 cards · FSDP_FULL_SHARD on 2× 96GB
+
+lora:
+  r: 64
+  alpha: 32
+  dropout: 0.0
+  bias: none
+  target_modules: [q_proj, k_proj, v_proj, o_proj, gate_proj, up_proj, down_proj]
+  trainable_pct: ~1%
+
+training:
+  learning_rate: 1.0e-5
+  lr_scheduler: cosine
+  warmup_ratio: 0.05
+  weight_decay: 0.01
+  per_device_batch_size: 1
+  gradient_accumulation_steps: 32
+  effective_batch_size: 64       # 2 procs × 1 × 32
+  max_seq_len: 3072              # backed off from 4096 due to 70B+context VRAM
+  max_steps: 1177                # ~30% of one epoch on Block-0
+  eval_steps: 200
+  save_steps: 200
+  save_total_limit: 5
+  early_stopping_patience: 3
+  early_stopping_threshold: 0.001
+  optim: adamw_torch
+  seed: 42
+
+hardware:
+  rig: swarmrails
+  gpus: 2× RTX PRO 6000 Blackwell 96GB
+  strategy: FSDP_FULL_SHARD
+  cook_time_hours: ~73
+
+data:
+  corpus: Royal Jelly CRE Block-0
+  train_records: 125651
+  eval_records: 996
+  fingerprint_disjoint: true
+  manifest_anchor: atlas.defendable.eth/<corpus_hash>
+
+defendable:
+  issuer: swarmandbee.eth
+  category: atlas.defendable.eth
+  anchor_topic: "0.0.10291838"
+  subdomains:
+    - corpus.atlas.defendable.eth
+    - recipe.atlas.defendable.eth
+    - weights.atlas.defendable.eth
+    - eval.atlas.defendable.eth
+
+deployment:
+  inference_engine: vLLM
+  precision_serving: bf16
+  context_serve: 128K
+  ephemeral_aiov: true            # AIOV sessions run in TPM-attested containers
+                                  # · no persistent volumes · session destroyed on response
+  endpoint_persona: atlas70b.atlasos.eth
+
+callbacks:
+  heartbeat: /tmp/atlas-70b.heartbeat
+  nas_mirror: /mnt/swarm/model_archives/atlas-70b
+  cook_auditor: every 3 hours · contamination kill switch at >1%
+
+eval_targets:
+  metric: eval_loss on 996-record holdout
+  baseline_pre_cook: ~5.0 (stock Llama-3.3-70B-Instruct on this corpus)
+  projected_post_cook: ~0.55-0.65
+  comparison: apples-to-apples vs Bookmaker-8B + Hack-Deed-Maker-3B (same recipe, same data)
