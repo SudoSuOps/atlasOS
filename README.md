@@ -275,8 +275,15 @@ atlasOS/
 Network namespace        atlasos.eth        identity · personas · live HACKER endpoints
 Receipt namespace        defendable.eth     certified documents · audit chains · Hedera anchors
 HACKER-PRO landing       hackerpro.eth      product page · pricing · order
+AIOV service surface     aiov.eth           the AI Opinion of Value · agent-callable via x402
 Firm presence            swarmandbee.ai     parent firm · build@swarmandbee.ai
 ```
+
+The .eth surfaces are the sovereign identity layer. ENS subdomains and primary names
+are owned by Caballerz Network LLC's wallets, the customer's wallets, or the service
+personas — never by a platform that could revoke them. See `AGENT-ECONOMY.md` for how
+ENS pairs with x402 (HTTP 402 Payment Required) to make these services callable
+agent-to-agent without sales calls, contracts, or API key dances.
 
 ENS expiry tracking is part of the operational discipline — see `docs/` for the
 domain renewal calendar. Nothing on the public AtlasOS surface fails because a
