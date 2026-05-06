@@ -6,6 +6,15 @@ Five SKUs. Three boxes. Two services. One network.
 
 ## The boxes
 
+> Every HACKER ships with one ENS subdomain at `<name>.atlasos.eth` (your identity
+> on the network · your confidentiality boundary · your wallet pairing). The
+> subdomain is bundled with the box at the listed price · no separate fee. See
+> `PERSONAS.md` for the full registration model.
+
+> Every HACKER also includes invite + verified-join access to the Defendable
+> Discord — the network community where HACKERs drop alpha during Monday meetings,
+> Tito Tuesday, and live dial-floor coverage. See `DISCORD.md`.
+
 ### HACKER · $250
 
 ```

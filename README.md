@@ -242,14 +242,16 @@ to Caballerz Network LLC. Available to customers who hold a HACKER box on the ne
 ```
 atlasOS/
 ├── README.md              this file
-├── ARCHITECTURE.md        full technical map
-├── PRODUCTS.md            HACKER · HACKER-PRO · HACKER-AGX · AIOV · Rainmaker
-├── PERSONAS.md            atlasos.eth subdomain registry · how identities work
-├── DEFENDABLE.md          the receipt layer · subdomain tree · audit walkthroughs
-├── MODELS.md              full model stack — Atlas-70B · Bookmaker-8B · Hack-Deed-Maker-3B · Docling
-├── CORPUS.md              Royal Jelly CRE corpus — provenance · RJP grading · cook auditor
+├── ARCHITECTURE.md        full technical map (4 layers · identity · compute · work · receipts)
+├── PRODUCTS.md            HACKER · HACKER-PRO · HACKER-AGX · AIOV · Rainmaker · SKU bundles
+├── PERSONAS.md            ENS subdomain registry · bundled with each HACKER · wallet pairing · confidentiality
+├── DEFENDABLE.md          the receipt layer · subdomain tree · 30-second audit walkthrough
+├── DISCORD.md             Defendable Discord · the network community · Monday meeting · Tito Tuesday · alpha drops
+├── INFRA.md               compute provenance · sovereign GPU fleet · "we are not a cloud, not a data harvester"
+├── MODELS.md              full model stack — Atlas-70B · Bookmaker-8B · Hack-Deed-Maker-3B · Docling · Whisper · Piper
+├── CORPUS.md              Royal Jelly CRE corpus — provenance · RJP-1 grading · cook auditor protocol
 ├── ROADMAP.md             what's running · what's next · cooks calendar
-├── recipes/               cook recipes (declarative · per-model spec) — atlas-70b · bookmaker-8b · hack-deed-maker-3b
+├── recipes/               declarative cook specs (YAML) — atlas-70b · bookmaker-8b · hack-deed-maker-3b
 ├── schema/                JSON schemas for every Defendable document
 │   ├── loi.schema.json
 │   ├── nda.schema.json
@@ -260,7 +262,8 @@ atlasOS/
 │   ├── hacker.yml         $250 · Orin Nano 8GB
 │   ├── hacker-pro.yml     $599 · Orin NX 16GB
 │   └── hacker-agx.yml     $2,000 · AGX Orin 64GB
-├── personas/              ENS registration templates
+├── personas/              ENS registration templates (one per HACKER tier)
+├── services/              AIOV · Rainmaker · Atlas-70B · the network-resident services
 └── docs/                  doctrine · brand language · sales motion
 ```
 
