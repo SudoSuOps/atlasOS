@@ -1,0 +1,540 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AIOV · The AI Opinion of Value</title>
+
+<meta name="description" content="A defensible commercial real estate value opinion in 30 minutes. Zero market exposure. Sovereign by architecture, not by promise. $499 per deal. From Caballerz Network LLC (DBA Swarm & Bee).">
+<meta name="author" content="Caballerz Network LLC">
+<link rel="canonical" href="https://aiov.swarmandbee.ai/">
+
+<meta property="og:title" content="AIOV · The AI Opinion of Value">
+<meta property="og:description" content="Get a defensible value before you call a broker. 30 minutes. $499. Zero market exposure. We can't see your deal even if we wanted to.">
+<meta property="og:url" content="https://aiov.swarmandbee.ai/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="AIOV by Atlas OS">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AIOV · The AI Opinion of Value">
+<meta name="twitter:description" content="A defensible CRE value opinion in 30 minutes. Sovereign by architecture.">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "AIOV — AI Opinion of Value",
+  "description": "Defensible commercial real estate value opinion delivered in 30 minutes via sovereign, ephemeral inference. Zero market exposure. $499 per deal.",
+  "provider": {
+    "@type": "Organization",
+    "name": "Caballerz Network LLC",
+    "alternateName": "Swarm & Bee",
+    "url": "https://swarmandbee.ai",
+    "identifier": "DUNS:138652395"
+  },
+  "areaServed": "United States",
+  "audience": {
+    "@type": "Audience",
+    "audienceType": "Family Offices, Institutional Real Estate Buyers, Sponsors"
+  },
+  "offers": {
+    "@type": "AggregateOffer",
+    "priceCurrency": "USD",
+    "lowPrice": "499",
+    "highPrice": "4999",
+    "offerCount": "2"
+  }
+}
+</script>
+
+<style>
+  :root {
+    --bg:        #0c1320;
+    --bg-2:     #111a2c;
+    --rule:     #1c2a44;
+    --ink:       #f4ede0;
+    --ink-2:     #d6cfc1;
+    --ink-mute:  #8b8472;
+    --accent:    #d4a850;
+    --accent-2:  #a98032;
+    --teal:      #6ab1ad;
+  }
+  *,*::before,*::after { box-sizing: border-box; }
+  html { background: var(--bg); }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font: 17px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,system-ui,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 56px 28px 80px; }
+  hr.rule {
+    border: 0;
+    border-top: 1px solid var(--rule);
+    margin: 56px 0;
+  }
+  h1, h2, h3, h4 {
+    font-family: "Iowan Old Style","Palatino Linotype","Book Antiqua",Palatino,Georgia,serif;
+    font-weight: 600;
+    color: var(--ink);
+    letter-spacing: -0.01em;
+  }
+  h1 { font-size: 64px; line-height: 1.05; margin: 0 0 8px; letter-spacing: -0.03em; }
+  h2 { font-size: 32px; line-height: 1.2;  margin: 0 0 20px; letter-spacing: -0.015em; }
+  h3 { font-size: 22px; line-height: 1.3;  margin: 0 0 12px; }
+  h4 { font-size: 17px; font-family: -apple-system,system-ui,sans-serif; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink-mute); margin: 0 0 8px; }
+  p  { margin: 0 0 18px; color: var(--ink-2); }
+  strong { color: var(--ink); font-weight: 600; }
+  em { color: var(--ink); font-style: italic; }
+  a { color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent-2); }
+  a:hover { color: var(--ink); border-bottom-color: var(--ink); }
+  blockquote {
+    margin: 32px 0;
+    padding: 0 0 0 22px;
+    border-left: 2px solid var(--accent);
+    font-family: "Iowan Old Style",Georgia,serif;
+    font-style: italic;
+    font-size: 22px;
+    line-height: 1.45;
+    color: var(--ink);
+  }
+  blockquote cite { display: block; margin-top: 10px; font-size: 14px; font-style: normal; color: var(--ink-mute); letter-spacing: 0.04em; text-transform: uppercase; }
+
+  /* Hero */
+  .hero { padding-top: 24px; }
+  .eyebrow {
+    display: inline-block;
+    font-size: 13px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 18px;
+    font-weight: 600;
+  }
+  .hero h1 .acronym { color: var(--accent); }
+  .hero p.lead {
+    font-size: 22px;
+    line-height: 1.5;
+    color: var(--ink);
+    margin: 24px 0 0;
+    max-width: 600px;
+  }
+  .hero .stats {
+    margin-top: 36px;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 32px;
+    color: var(--ink-mute);
+    font-size: 14px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+  .hero .stats strong { display: block; color: var(--ink); font-family: "Iowan Old Style",Georgia,serif; font-size: 26px; letter-spacing: -0.01em; text-transform: none; margin-bottom: 4px; }
+
+  /* Comparison table */
+  table.compare {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 24px 0 8px;
+    font-size: 15px;
+  }
+  table.compare th, table.compare td {
+    text-align: left;
+    padding: 14px 12px;
+    border-bottom: 1px solid var(--rule);
+    vertical-align: top;
+  }
+  table.compare th {
+    font-family: -apple-system,system-ui,sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--ink-mute);
+  }
+  table.compare th.aiov-col, table.compare td.aiov-col {
+    background: rgba(212, 168, 80, 0.05);
+  }
+  table.compare th.aiov-col { color: var(--accent); }
+  table.compare td:first-child { color: var(--ink-mute); }
+  table.compare td.kill { color: var(--ink); font-weight: 600; }
+
+  /* Receipt block */
+  pre.receipt {
+    background: var(--bg-2);
+    border: 1px solid var(--rule);
+    border-left: 3px solid var(--accent);
+    padding: 22px 24px;
+    border-radius: 4px;
+    overflow-x: auto;
+    font: 13px/1.7 ui-monospace,SFMono-Regular,Menlo,Monaco,"Cascadia Mono",Consolas,monospace;
+    color: var(--ink-2);
+    margin: 24px 0;
+  }
+  pre.receipt .key { color: var(--accent); }
+  pre.receipt .str { color: var(--teal); }
+  pre.receipt .com { color: var(--ink-mute); font-style: italic; }
+
+  /* Pricing */
+  .pricing { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin: 28px 0; }
+  .price-card {
+    background: var(--bg-2);
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    padding: 28px 24px;
+  }
+  .price-card.featured { border-color: var(--accent-2); background: linear-gradient(180deg, rgba(212,168,80,0.05), transparent 60%); }
+  .price-card h3 { font-family: -apple-system,system-ui,sans-serif; font-size: 14px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--ink-mute); font-weight: 600; margin-bottom: 16px; }
+  .price-card .num { font-family: "Iowan Old Style",Georgia,serif; font-size: 40px; color: var(--ink); letter-spacing: -0.02em; }
+  .price-card .num small { font-size: 16px; color: var(--ink-mute); font-weight: normal; }
+  .price-card p { font-size: 14px; margin: 14px 0 0; color: var(--ink-2); }
+  @media (max-width: 600px) {
+    .pricing { grid-template-columns: 1fr; }
+    .hero .stats { grid-template-columns: 1fr; gap: 18px; }
+    h1 { font-size: 44px; }
+    h2 { font-size: 26px; }
+  }
+
+  /* CTA */
+  .cta-row {
+    margin: 36px 0 8px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    align-items: center;
+  }
+  .btn {
+    display: inline-block;
+    padding: 14px 28px;
+    border-radius: 4px;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    border: 1px solid var(--accent-2);
+    transition: all 0.15s;
+  }
+  .btn.primary { background: var(--accent); color: var(--bg); border-color: var(--accent); }
+  .btn.primary:hover { background: #e3b85f; border-color: #e3b85f; }
+  .btn.ghost { background: transparent; color: var(--ink); border-color: var(--rule); }
+  .btn.ghost:hover { border-color: var(--accent); color: var(--accent); }
+
+  /* Lists */
+  ul.discipline { list-style: none; padding: 0; margin: 18px 0; }
+  ul.discipline li {
+    padding: 10px 0 10px 30px;
+    position: relative;
+    color: var(--ink-2);
+    border-bottom: 1px solid var(--rule);
+  }
+  ul.discipline li:last-child { border-bottom: 0; }
+  ul.discipline li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-weight: 600;
+  }
+  ul.discipline li strong { color: var(--ink); }
+
+  /* Step blocks */
+  .steps { counter-reset: step; margin: 24px 0; }
+  .step {
+    counter-increment: step;
+    padding: 18px 0 18px 56px;
+    position: relative;
+    border-bottom: 1px solid var(--rule);
+  }
+  .step:last-child { border-bottom: 0; }
+  .step::before {
+    content: counter(step, decimal-leading-zero);
+    position: absolute;
+    left: 0;
+    top: 18px;
+    font-family: "Iowan Old Style",Georgia,serif;
+    font-size: 28px;
+    color: var(--accent);
+    font-weight: 600;
+  }
+  .step h3 { margin-bottom: 6px; font-size: 17px; font-family: -apple-system,system-ui,sans-serif; }
+  .step p { margin: 0; font-size: 15px; color: var(--ink-2); }
+
+  /* Footer */
+  footer {
+    margin-top: 80px;
+    padding-top: 32px;
+    border-top: 1px solid var(--rule);
+    color: var(--ink-mute);
+    font-size: 13px;
+    line-height: 1.7;
+  }
+  footer .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    margin-bottom: 24px;
+  }
+  footer h4 { color: var(--ink-mute); margin-bottom: 12px; }
+  footer p { color: var(--ink-mute); font-size: 13px; }
+  footer a { color: var(--ink-2); border-bottom-color: var(--rule); }
+  footer .closing {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--rule);
+    font-family: "Iowan Old Style",Georgia,serif;
+    font-style: italic;
+    font-size: 16px;
+    color: var(--accent);
+  }
+  @media (max-width: 600px) {
+    footer .grid { grid-template-columns: 1fr; }
+  }
+
+  /* Selection */
+  ::selection { background: var(--accent); color: var(--bg); }
+</style>
+</head>
+
+<body>
+<main class="wrap">
+
+<section class="hero">
+  <span class="eyebrow">From Atlas OS · A Caballerz Network Product</span>
+  <h1><span class="acronym">AIOV</span></h1>
+  <h2 style="margin-top:0;color:var(--ink-2);font-weight:500;font-style:italic;">The AI Opinion of Value</h2>
+  <p class="lead">A defensible commercial real estate value opinion in <strong>thirty minutes</strong>. Zero market exposure. Sovereign by architecture, not by promise.</p>
+  <div class="stats">
+    <div><strong>30 min</strong>turnaround</div>
+    <div><strong>$499</strong>per deal</div>
+    <div><strong>0</strong>market exposure</div>
+  </div>
+  <div class="cta-row">
+    <a class="btn primary" href="#order">Order an AIOV</a>
+    <a class="btn ghost" href="#how">How it works</a>
+  </div>
+</section>
+
+<hr class="rule">
+
+<section>
+  <h4>The Asymmetry</h4>
+  <h2>What a BOV costs you</h2>
+  <p>A Broker Opinion of Value is "free" because it costs you the listing.</p>
+  <p>The first broker who runs the BOV thinks they have your business. The first appraiser may leak your comps. The first listing teaser is indexed by every data platform within an hour. <strong>Once the market knows you're thinking about it, the leverage shifts before you've decided anything.</strong></p>
+  <p>Family offices have lived with this asymmetry for thirty years. <em>How do I know what I have without telling everyone I might sell?</em></p>
+  <p style="color:var(--ink);"><strong>AIOV is what comes before any of that.</strong></p>
+</section>
+
+<hr class="rule">
+
+<section id="how">
+  <h4>How it works</h4>
+  <h2>Drop the docs. Read the report.</h2>
+
+  <div class="steps">
+    <div class="step">
+      <h3>Drop your documents</h3>
+      <p>Rent roll · T-12 · lease · ESA · whatever you have. Files go to your HACKER-PRO box · they never touch a cloud.</p>
+    </div>
+    <div class="step">
+      <h3>Local parse, locked numbers</h3>
+      <p>The box reads every page on its own hardware. Every cap rate, lease term, escalation, tenant credit · structured and locked before anything moves.</p>
+    </div>
+    <div class="step">
+      <h3>Encrypted brief to Atlas-70B</h3>
+      <p>A small encrypted JSON brief travels to Atlas-70B in an ephemeral container. No persistent storage. No analyst sees it. No support tech sees it.</p>
+    </div>
+    <div class="step">
+      <h3>Encrypted return, on-box render</h3>
+      <p>The result comes back encrypted to your wallet only. Your HACKER-PRO renders the AIOV report locally · stays on your disk.</p>
+    </div>
+    <div class="step">
+      <h3>Receipt anchored on Hedera</h3>
+      <p>A session metadata record posts to <code>aiov.defendable.eth</code>. Counsel can prove the work was done · without ever seeing what was done.</p>
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<section>
+  <h4>The Privacy Architecture</h4>
+  <h2>We can't see your deal even if we wanted to.</h2>
+  <p>That sentence isn't policy. It's structure.</p>
+  <ul class="discipline">
+    <li><strong>The PDFs never leave your office hardware.</strong> Local parsing on your HACKER-PRO. No cloud upload.</li>
+    <li><strong>The encrypted brief uses a one-time session key.</strong> The key is generated on your box · we never hold it.</li>
+    <li><strong>Atlas-70B runs in a TPM-attested ephemeral container.</strong> No persistent volumes. No writable disk. The container is destroyed on response.</li>
+    <li><strong>The return is encrypted to your wallet.</strong> Only your <code>familyofficexyz.atlasos.eth</code> wallet can decrypt.</li>
+    <li><strong>Hedera anchors metadata only.</strong> Session ID, timestamps, request size, container attestation. <em>Never</em> the deal data, address, tenant, financials.</li>
+  </ul>
+  <p>This is what makes the claim survive a CTO audit. Architecture, not contract language.</p>
+</section>
+
+<hr class="rule">
+
+<section>
+  <h4>Side by side</h4>
+  <h2>AIOV vs BOV vs Appraisal</h2>
+  <table class="compare">
+    <thead>
+      <tr>
+        <th></th>
+        <th>BOV</th>
+        <th>Appraisal</th>
+        <th class="aiov-col">AIOV</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Turnaround</td>
+        <td>1 to 2 weeks</td>
+        <td>2 to 4 weeks</td>
+        <td class="aiov-col kill">30 to 60 min</td>
+      </tr>
+      <tr>
+        <td>Stated cost</td>
+        <td>"Free"</td>
+        <td>$5K to $15K</td>
+        <td class="aiov-col">$499</td>
+      </tr>
+      <tr>
+        <td>Hidden cost</td>
+        <td>Broker thinks they have your listing</td>
+        <td>Comps may leak</td>
+        <td class="aiov-col kill">None</td>
+      </tr>
+      <tr>
+        <td>Market exposure</td>
+        <td>Often leaks</td>
+        <td>Possible</td>
+        <td class="aiov-col kill">Zero</td>
+      </tr>
+      <tr>
+        <td>Confidentiality</td>
+        <td>Trust the broker</td>
+        <td>Trust the firm</td>
+        <td class="aiov-col kill">Cryptographic</td>
+      </tr>
+      <tr>
+        <td>Receipt</td>
+        <td>Word of mouth</td>
+        <td>Bound report</td>
+        <td class="aiov-col">aiov.defendable.eth/&lt;id&gt;</td>
+      </tr>
+      <tr>
+        <td>Defensibility</td>
+        <td>Broker reputation</td>
+        <td>Designation (MAI etc.)</td>
+        <td class="aiov-col kill">Anchored chain</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<hr class="rule">
+
+<section>
+  <h4>The Receipt</h4>
+  <h2>What lands on Hedera. What stays sovereign.</h2>
+  <p>Every AIOV produces an anchored session record. Counsel verifies in 30 seconds. The deal data itself never gets posted.</p>
+
+  <pre class="receipt"><span class="com">// aiov.defendable.eth/tesla-flower-mound-2026-05</span>
+{
+  <span class="key">"session_id"</span>:           <span class="str">"01970d54-7b3c-4f12-9e8e-2c4f6a1d5fb8"</span>,
+  <span class="key">"requestor"</span>:            <span class="str">"familyofficexyz.atlasos.eth"</span>,
+  <span class="key">"service"</span>:              <span class="str">"atlas70b.atlasos.eth"</span>,
+  <span class="key">"started_at"</span>:           <span class="str">"2026-05-06T14:33:11Z"</span>,
+  <span class="key">"completed_at"</span>:         <span class="str">"2026-05-06T15:08:42Z"</span>,
+  <span class="key">"request_size_bytes"</span>:   2387,
+  <span class="key">"response_size_bytes"</span>:  18452,
+  <span class="key">"container_attestation"</span>: <span class="str">"sha256:tpm:0x2c8f...4a91"</span>,
+  <span class="key">"hedera_topic"</span>:         <span class="str">"0.0.10291838"</span>,
+  <span class="key">"hedera_seq"</span>:           5103
+  <span class="com">// no deal data, no address, no tenant, no financials — by design</span>
+}</pre>
+
+  <p>You can hand that JSON to your CTO, your CFO, or your counsel. They can confirm the work happened, when it happened, who requested it, and which container produced it. They cannot — and will never be able to — see what was inside.</p>
+</section>
+
+<hr class="rule">
+
+<section id="pricing">
+  <h4>Pricing</h4>
+  <h2>Two ways to engage.</h2>
+  <div class="pricing">
+    <div class="price-card">
+      <h3>Per Deal</h3>
+      <div class="num">$499<small> / AIOV</small></div>
+      <p>Single deal. 30 to 60 minute turnaround. Sovereign architecture. Anchored receipt.</p>
+    </div>
+    <div class="price-card featured">
+      <h3>Subscription</h3>
+      <div class="num">$4,999<small> / year</small></div>
+      <p>12 AIOVs per year. Priority Atlas-70B compute. Quarterly portfolio refresh. <em>Best for active family offices managing 10+ properties.</em></p>
+    </div>
+  </div>
+  <p>Enterprise pricing available for multi-billion family offices and full-portfolio coverage.</p>
+</section>
+
+<hr class="rule">
+
+<section>
+  <h4>The Box</h4>
+  <h2>AIOV runs on a HACKER-PRO.</h2>
+  <p>The HACKER-PRO is a $599 silver box that sits on your desk. It hosts the Bookmaker brain locally, parses your documents on your hardware, and routes the encrypted brief to Atlas-70B for the heavy lift. The brain at the desk-edge plus the doctrine model in our datacenter — <strong>both run on compute we own.</strong> No cloud provider. No data harvester. No third-party model API.</p>
+  <p>Every HACKER-PRO ships with one ENS subdomain at <code>&lt;your-name&gt;.atlasos.eth</code> · your wallet · your sovereignty boundary on the network.</p>
+  <p style="margin-top:24px;"><a href="https://hackerpro.eth.link" style="font-weight:600;">Learn about HACKER-PRO →</a></p>
+</section>
+
+<hr class="rule">
+
+<section id="order">
+  <h4>To order</h4>
+  <h2>Two paths in.</h2>
+  <ul class="discipline">
+    <li><strong>Existing HACKER-PRO owner.</strong> Voice prompt your box: <em>"AIOV my property at &lt;address&gt;."</em> The box handles the rest · debits your funded wallet.</li>
+    <li><strong>New customer.</strong> Order a HACKER-PRO at <a href="https://hackerpro.eth.link">hackerpro.eth</a> · the box ships with a wallet pre-funded for your first AIOV.</li>
+  </ul>
+  <div class="cta-row">
+    <a class="btn primary" href="https://hackerpro.eth.link">Order HACKER-PRO</a>
+    <a class="btn ghost" href="mailto:build@swarmandbee.ai?subject=AIOV%20%C2%B7%20enterprise%20inquiry">Enterprise inquiry</a>
+  </div>
+</section>
+
+<hr class="rule">
+
+<section>
+  <blockquote>
+    Thirty years on a national platform. Eight billion in transacted deals. I sat in the pit. The buyer always asked the same question first: <em>what is this really worth, before I have to tell anyone I'm asking?</em>
+    <br><br>
+    AIOV is the answer. We built it because nothing else did.
+    <cite>— Founder, Caballerz Network LLC</cite>
+  </blockquote>
+</section>
+
+<footer>
+  <div class="grid">
+    <div>
+      <h4>The trust standard</h4>
+      <p><strong>Verified.</strong> Every fact traces to a source.</p>
+      <p><strong>Vetted.</strong> Every fact passes the seven-dimension drill.</p>
+      <p><strong>Virtu.</strong> Something the founder would put his name on.</p>
+    </div>
+    <div>
+      <h4>Provenance</h4>
+      <p>Caballerz Network LLC <br>DBA Swarm &amp; Bee · Florida<br>D-U-N-S 138652395</p>
+      <p>Network · <a href="https://atlasos.eth.link">atlasos.eth</a><br>Receipts · <a href="https://defendable.eth.link">defendable.eth</a><br>Source · <a href="https://github.com/SudoSuOps/atlasOS">github.com/SudoSuOps/atlasOS</a></p>
+    </div>
+  </div>
+  <p style="font-size:12px;color:var(--ink-mute);">AIOV is an AI-generated opinion of value. It is not an appraisal and is not provided by a state-licensed appraiser. AIOV reports are intended as an internal analytical tool for property owners, family offices, and institutional investors. Reports must not be used as the basis for federally regulated transactions where a state-licensed appraisal is required.</p>
+  <p class="closing">The 3% commission is optional now.</p>
+</footer>
+
+</main>
+</body>
+</html>
